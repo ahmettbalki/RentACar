@@ -19,3 +19,29 @@ This project is a **Spring Boot**-based web application designed to manage a car
 - **Lombok** (Code simplification)
 
 ---
+
+## 🏗️ Architectural Layers
+
+The project is built with a **multi-layered architecture** to ensure scalability, testability, and clear separation of concerns. The layers are:
+
+### 1. WebApi Layer (API Layer)
+- Handles incoming HTTP requests and returns responses.
+- Responsible for interacting with the business layer.
+- Example: `BrandsController`
+
+### 2. Business Layer (Business Logic)
+- Contains the core business logic of the application.
+- Validates and processes data before passing it to the data layer.
+- Interfaces are used to abstract service implementations.
+- Example: `BrandService` and its implementation.
+
+### 3. Data Access Layer (Repository)
+- Directly interacts with the database using Spring Data JPA.
+- Handles CRUD operations and complex queries.
+- Example: `BrandRepository`
+
+### 4. Entity Layer
+- Contains the domain models (entities) mapped to database tables.
+- Example: `Brand`, `Car`, etc.
+
+---
